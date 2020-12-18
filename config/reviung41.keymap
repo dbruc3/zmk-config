@@ -44,13 +44,13 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-// |     |     |     |     |     |     |   |     |     |     |     |     |     |
+// |     |     |     |     |     |     |   |     |     |     |     |     | DEL |
+// |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
 // | F12 | F1  | F2  |  F3 | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | F11 |
 //                       |     | ADJ | BKSP |    |     |
                         bindings = <
-   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
-   &trans &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH      &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6
+   &trans &none &none &none &none &none                         &none &none &none &none &none    &kp DEL
+   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
    &kp F12 &kp F1   &kp F2  &kp F3  &kp F4  &kp F5       &kp F6    &kp F7    &kp F8    &kp F9   &kp F10   &kp F11
                                 &trans      &mo 3       &kp BSPC        &trans      &trans
                         >;
@@ -72,12 +72,3 @@
                 };
         };
 };
-/*
-TODO:
-K_PP - play pause
-K_NEXT
-K_PREV
-
-K_SLEEP - sleep or C_SLEEP_MODE
-RESET?
-*/
