@@ -31,12 +31,12 @@
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// | ~  |  !  |  @  |  #  |  $  |  %  |---|  ^  |  &  |  *  |  _  |  +  |    DEL    |
+// | ~  |  !  |  @  |  #  |  $  |  %  |---|  ^  |  &  |  *  |  _  |  +  |    BKSP   |
 // | `  |  _  |  +  |  {  |  (  |  [  |---|  ]  |  )  |  }  |  -  |  =  |     |     |
 // |    | UNDO| CUT | COPY|PASTE| REDO|---|     |     |  <  |  >  |  \  | SHFT(RET) |
 //                       |     |     | SPC | ADJ |     |
                         bindings = <
-   &kp TILDE &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp UNDER  &kp PLUS  &kp DEL
+   &kp TILDE &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp UNDER  &kp PLUS  &kp BSPC
    &kp GRAVE &kp MINUS &kp KP_PLUS &kp LBRC &kp LPAR &kp LBKT       &kp RBKT  &kp RPAR &kp RBRC  &kp MINUS &kp EQUAL &kp PIPE
    &trans &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO        &kp HOME  &kp END  &kp LT &kp GT &kp BSLH &mt RSHFT RET
                                  &trans      &trans       &kp SPACE        &mo 3       &trans
@@ -45,12 +45,12 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |   |     |     |     |     |     | DEL |
+// |     |     |     |     |     |     |   |     |     |     |     |     | BKSP |
 // |     |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |     |
 // | F12 | F1  | F2  |  F3 | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | F11 |
 //                       |     | ADJ | BKSP |    |     |
                         bindings = <
-   &trans &none &none &none &none &none                         &none &none &none &none &none    &kp DEL
+   &trans &none &none &none &none &none                         &none &none &none &none &none    &kp BSPC
    &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &trans
    &kp F12 &kp F1   &kp F2  &kp F3  &kp F4  &kp F5       &kp F6    &kp F7    &kp F8    &kp F9   &kp F10   &kp F11
                                 &trans      &mo 3       &kp BSPC        &trans      &trans
@@ -59,15 +59,15 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// |SLEEP|  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |   |  BT C  |  USB  | MUTE | VOLU | VOLD |  |
-// | BACK |  HOME  |  BRI UP  |  BRI DN  |  BKLGHT  |  5  |   |  LEFT  |  DOWN  |  UP  |  RIGHT  |  |  |
-// |POWER| SEARCH |  2  |  3  |  BOOT  |  RESET  |   |  6  |  7  |  8  |  9  |  0  | DEL |
+// |SLEEP|  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |         | BTC | USB  | MUTE | VOLU | VOLD  | DEL	|
+// | BACK |  HOME  |  BRI UP  |  BRI DN  |  BKLGHT |5 |    | LEFT | DOWN |  UP  | RIGHT | FORWARD |
+// |POWER| SEARCH |  2  |  3  |  BOOT  |  RESET  |         |  6  | SCROLL DOWN | SCROLL UP |  0    | DEL |
 //                       |     |  |  |    |     |
 //                                              |     |     |     |     |     |
                         bindings = <
-   &kp K_SLEEP &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3   &bt BT_SEL 4        &bt BT_CLR    &out OUT_TOG    &kp K_MUTE    &kp K_VOL_DN    &kp K_VOL_UP    &trans
-   &kp K_BACK &kp C_AC_HOME    &kp C_BRI_UP    &kp C_BRI_DN    &kp C_BKLT_TOG    &kp N5        &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT    &kp N0    &kp DEL
-   &kp K_PWR &kp C_AC_SEARCH   &kp N2    &kp N3    &bootloader    &reset        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
+   &kp K_SLEEP	&bt BT_SEL 0    &bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3		&bt BT_SEL 4					&bt BT_CLR  &out OUT_TOG    &kp K_MUTE				&kp K_VOL_DN	&kp K_VOL_UP	&kp DEL
+   &kp K_BACK		&kp C_AC_HOME   &kp C_BRI_UP	&kp C_BRI_DN  &kp C_BKLT_TOG	&kp N5								&kp LEFT    &kp DOWN				&kp UP						&kp RIGHT			&kp N0				&kp K_FORWARD
+   &kp K_PWR		&kp C_AC_SEARCH	&kp N2				&kp N3				&bootloader			&reset								&kp N6			&kp K_SCROLL_UP	&kp K_SCROLL_DOWN	&kp N9				&kp N0				&kp DEL
                                                              &trans      &trans       &tog 3        &trans      &trans
                         >;
                 };
