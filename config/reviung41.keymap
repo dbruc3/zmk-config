@@ -65,11 +65,10 @@
 //	 &kp K_SLEEP &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &bt BT_CLR &out OUT_TOG &trans &trans &trans &kp K_MUTE
 //	 &kp K_BACK &kp C_AC_HOME &kp C_BRI_UP &kp C_BRI_DN &kp C_BKLT_TOG &trans         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &kp K_VOL_UP
 //	 &kp K_PWR &kp C_AC_SEARCH &trans &trans &bootloader &reset                       &trans &kp K_SCROLL_UP &kp K_SCROLL_DOWN &trans &trans &kp K_VOL_DN
-//																																&trans &trans &trans &trans &trans
    &kp F12 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5     &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11
 	 &trans &trans &trans &trans &trans &trans	    &trans &trans	&trans &trans	&trans &trans	
 	 &trans &trans &trans &trans &trans &trans	    &trans &trans	&trans &trans	&trans &trans	
-									&trans      &mo 3       &kp SPACE        &trans      &trans
+															&trans &trans &trans &trans &trans
                         >;
                 };
         };
